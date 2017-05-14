@@ -14,6 +14,12 @@ function load_style_script() { //имя функции произвольное
 add_action('wp_enqueue_scripts', 'load_style_script');
 
 /**
+* Включаем поддержку миниатюр 
+*/
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(180, 180);
+
+/**
 * Добавляем поддержку виджетов
 */
 register_sidebar( array('name' => 'Меню',
@@ -34,3 +40,4 @@ register_sidebar( array('name' => 'Меню',
 
 
 // add_action( 'widgets_init', 'register_my_widgets' );
+
